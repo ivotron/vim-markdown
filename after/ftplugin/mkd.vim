@@ -20,9 +20,6 @@ func! Foldexpr_markdown(lnum)
     if  l2 =~ '^==\+\s*'
         " next line is underlined (level 1)
         return '>1'
-    elseif l2 =~ '^--\+\s*'
-        " next line is underlined (level 2)
-        return '>2'
     elseif l1 =~ '^#'
         " don't include the section title in the fold
         return '-1'
